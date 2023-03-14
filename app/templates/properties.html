@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block main %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/properties.css') }}" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<h1 class="display-5 fw-bold pb-4">Properties</h1>
+
+<div class="prop_container">
+    {% for property in properties %}
+    <div class="prop_card">
+        <div class="crop">
+            <img class="img" src={{url_for('static', filename=property.photo )}} alt="no picture" />
+        </div>
+        <div class="details">
+            <div class="title">{{property.title}}</div>
+            <div class="location"><span><i class="icons fa fa-map-marker"></i>{{property.location}}</span></div>
+            <div class="price">{{property.price | currencyFormat}}</div>
+        </div>
+        <form method="post" action="{{ url_for('property_view', propertyid=property.id) }}">
+            <button class="btn btn-lg w-100 view-btn">View Property</button>
+        </form>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

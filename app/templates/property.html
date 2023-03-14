@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block main %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/property.css') }}" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="prop_container">
+    <div class="prop_card">
+        <div class="crop">
+            <img class="img" src={{url_for('static', filename=property.photo )}} alt="no picture" />
+        </div>
+    </div>
+    <div class="details">
+        <div class="title">{{property.title}}</div>
+        <div class="data-div d-flex">
+            <div class="price">{{property.price | currencyFormat}}</div>
+            <div class="property_type">{{property.property_type}}</div>
+        </div>
+        <div class="description">{{property.description}}</div>
+        <div class="no-div d-flex">
+            <div class="no_rooms"><span><i class="icons fa fa-bed"></i>{{property.no_rooms}} Bedrooms </span></div>
+            <div class="no_bathrooms"><span><i class="icons fa fa-shower"></i>{{property.no_bathrooms}} Bathrooms</span></div>
+        </div>
+        <div class="location"><span><i class="icons fa fa-map-marker"></i>{{property.location}}</span></div>
+        <button class="btn btn-lg email-btn">Email Realtor</button>
+    </div>
+</div>
+
+{% endblock %}

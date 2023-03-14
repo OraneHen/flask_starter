@@ -1,0 +1,102 @@
+.prop_container {
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 4px 8px 0 rgba(100, 99, 99, 0.2);
+    max-width: 900px;
+    margin: auto;
+    max-height: 400px;
+}
+
+.crop {
+    width: 400px;
+    height: 400px;
+    min-width: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.details {
+    background-color: white;
+    width: 100%;
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.icons {
+    margin-right: 5px;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 23px;
+    min-height: 50px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.data-div{
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 12px;
+    padding: 2px 15px;
+    background-color: #64a4f8;
+    color: white;
+    border-radius: 25px;
+    margin-right: 7px;
+}
+
+.property_type {
+    font-size: 12px;
+    padding: 2px 15px;
+    background-color: #fcbf1e;
+    color: white;
+    border-radius: 25px;
+}
+
+.description {
+    min-height: 100px;
+    margin-bottom: 20px;
+}
+
+.no_rooms{
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+
+.location {
+    margin-bottom: 20px;
+}
+
+.email-btn {
+    border-radius: 3px;
+    font-size: 15px;
+    padding: 5px 10px;
+    background-color: #14b7a6;
+    color: white;
+    width: max-content;
+}
+
+.email-btn:hover {
+    background-color: #14b7a6;
+    color: white;
+}
+
+.email-btn:active {
+    background-color: #14b7a6;
+    color: white;
+}
+
+.email-btn:hover:active {
+    background-color: #14b7a6;
+    color: white;
+}
